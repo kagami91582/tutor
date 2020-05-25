@@ -5,6 +5,8 @@ from lms.envs.production import *
 {% include "apps/openedx/settings/partials/common_lms.py" %}
 
 ALLOWED_HOSTS = [
+    "*",
+    "0.0.0.0",
     ENV_TOKENS.get("LMS_BASE"),
     FEATURES["PREVIEW_LMS_BASE"],
     "lms",
